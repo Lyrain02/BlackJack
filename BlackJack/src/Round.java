@@ -84,6 +84,10 @@ public class Round {
             }
             switch (op){
                 case 'd':
+                    if(!player.hasBet(bet)){
+                        System.out.println("you don't have enough money!");
+                        break;
+                    }
                     player.loseMoney(bet);
                     bet+=bet;
                     if(deck.hasNext()){
