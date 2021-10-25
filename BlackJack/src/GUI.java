@@ -156,6 +156,7 @@ public class GUI {
             hCards[i] = new JLabel("   ");
             hCards[i].setPreferredSize(new Dimension(100,150));
             hCards[i].setHorizontalAlignment(SwingConstants.CENTER);
+            hCards[i].setForeground(Color.BLACK);
             hCards[i].setBackground(Color.GRAY);
             hCards[i].setOpaque(true);
             hCards[i].setVisible(false);
@@ -176,6 +177,7 @@ public class GUI {
             pCards[i] = new JLabel("   ");
             pCards[i].setPreferredSize(new Dimension(100,150));
             pCards[i].setHorizontalAlignment(SwingConstants.CENTER);
+            pCards[i].setForeground(Color.BLACK);
             pCards[i].setBackground(Color.GRAY);
             pCards[i].setOpaque(true);
             pCards[i].setVisible(false);
