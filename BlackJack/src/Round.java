@@ -174,7 +174,7 @@ public class Round {
                 status = 'd';
             }
         }
-        Thread.currentThread().sleep(500);
+        Thread.currentThread().sleep(1000);
         gui.changeBody(4);
         switch (status){
             case 'b':

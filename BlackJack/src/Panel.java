@@ -25,6 +25,10 @@ public class Panel {
             }
             gui.clearUserOp();
             String str = gui.getUserInput();
+            if(str.equals("")){
+                gui.showMessage("Wrong Bet","You must input something!");
+                continue;
+            }
             try{
                 bet = Integer.parseInt(str);
             }catch (Exception e){

@@ -248,6 +248,7 @@ public class GUI {
             @Override
             public void actionPerformed(ActionEvent e) {
                 op = 's';
+                btn_double.setVisible(false);
 //                cardLayout.show(body,"p1");
 //                changeBody(1);//不一定在这里调用
             }
@@ -263,6 +264,7 @@ public class GUI {
             @Override
             public void actionPerformed(ActionEvent e) {
                 op = 'h';
+                btn_double.setVisible(false);
 //                cardLayout.show(body,"p1");
 //                changeBody(1);//不一定在这里调用
             }
@@ -377,7 +379,7 @@ public class GUI {
         hCards[idx].setVisible(true);
     }
     public void showHouseCard() throws InterruptedException {
-//        Thread.currentThread().sleep(500);
+        Thread.currentThread().sleep(500);
         for (JLabel c: hCards)
             c.setBackground(Color.GRAY);
 //        hCards[idx].setText(value);

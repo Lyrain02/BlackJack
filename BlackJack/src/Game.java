@@ -29,7 +29,7 @@ public class Game {
         if(player.hasMoney()==false){
             gameStatus = false;
 //            System.out.println("You do not have enough money!");
-            gui.showExitMessage("Warning","you do not have enough money!");
+            gui.showExitMessage("Game Over","You lose all your money, bye！");
             return false;
         }
         round.init();
