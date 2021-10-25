@@ -91,14 +91,13 @@ public class Round {
     }
 
     public void playerStage() throws InterruptedException {
-//        boolean first = true;
-        int times = 0;
+        boolean first = true;
         boolean going = true;
         char op;
-        while(status == 'g' && going && times<3){
-            if(times==0){
+        while(status == 'g' && going && player.getHand().getNum()<5){
+            if(first){
                 op = panel.operation1();
-//                first = false;
+                first = false;
             }else{
                 op = panel.operation2();
             }
@@ -138,7 +137,6 @@ public class Round {
             if(player.isLose()){
                 status = 'l';
             }
-            times++;
         }
     }
 
