@@ -5,24 +5,31 @@ public class Game {
     private Panel panel;
     private Round round;
     private boolean gameStatus;
+    private GUI gui;
+    private static final int initWallet = 1000;
 
     Game(){
+        gui = new GUI();
         house = new House();
-        player = new Player(1,1000);
+        player = new Player(1,initWallet);
         deck = new Deck();
         gameStatus = false;
-        panel = new Panel();
-        round = new Round(house,player,deck,panel);
+        panel = new Panel(gui);
+        round = new Round(house,player,deck,panel,gui);
     }
 
     public void init(){
+        gui.setWallet(initWallet);
+        gui.showGUI();
         gameStatus = panel.play();
+
     }
 
-    public boolean play(){
+    public boolean play() throws InterruptedException {
         if(player.hasMoney()==false){
             gameStatus = false;
-            System.out.println("You do not have enough money!");
+//            System.out.println("You do not have enough money!");
+            gui.showExitMessage("Warning","you do not have enough money!");
             return false;
         }
         round.init();
@@ -31,8 +38,6 @@ public class Game {
         round.playerStage();
         round.houseStage();
         round.finalStage();
-//        System.out.println("Game is on!");
-//        player.loseMoney(500);
         return true;
     }
 

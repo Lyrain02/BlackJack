@@ -58,25 +58,4 @@ public class Deck {
     }
 
 
-    //only for test
-    public static void test(){
-        Deck d = new Deck();
-        d.shuffle();
-        for(int i : d.sequence){
-            System.out.print(i+" ");
-        }
-        System.out.println();
-        Card c1 = d.nextCard();
-        System.out.println("current: "+d.current+"value: "+c1.getValueC()+",suit: "+c1.getSuit());
-        Card c2 = d.nextCard();
-        System.out.println("current: "+d.current+"value: "+c2.getValueC()+",suit: "+c2.getSuit());
-        d.shuffle();
-        for(int i : d.sequence){
-            System.out.print(i+" ");
-        }
-        System.out.println();
-        System.out.println("current: "+d.current);
-    }
-
-
 }

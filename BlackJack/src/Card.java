@@ -61,20 +61,4 @@ public class Card {
         return suit.toString();
     }
 
-    public static void test(){ //used for test
-        for (int i=1;i<=13;i++) {
-            Card c1 = new Card(i, 'H');
-            System.out.println("valueN: " + c1.getValueN() + ",valueC: "
-                    + c1.getValueC() + ",valueBJ: " + c1.getValueBJ()+",suit: "+c1.getSuit());
-            Card c2 = new Card(i, 'D');
-            System.out.println("valueN: " + c2.getValueN() + ",valueC: "
-                    + c2.getValueC() + ",valueBJ: " + c2.getValueBJ()+",suit: "+c2.getSuit());
-            Card c3 = new Card(i, 'S');
-            System.out.println("valueN: " + c3.getValueN() + ",valueC: "
-                    + c3.getValueC() + ",valueBJ: " + c3.getValueBJ()+",suit: "+c3.getSuit());
-            Card c4 = new Card(i, 'C');
-            System.out.println("valueN: " + c4.getValueN() + ",valueC: "
-                    + c4.getValueC() + ",valueBJ: " + c4.getValueBJ()+",suit: "+c4.getSuit());
-        }
-    }
 }

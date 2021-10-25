@@ -2,7 +2,7 @@ public class House {
     private Hand hand;
 
     House(){
-        this.hand = new Hand();
+        this.hand = new Hand();;
     }
 
     public int addCard(Card c){

@@ -64,7 +64,8 @@ public class Hand {
     }
 
     public void showHand(){
-        System.out.print("BJ value: "+getValue()+"\t");
+//        System.out.print("BJ value: "+getValue()+"\t");
+
         System.out.print("hand: ");
         for(Card t : hand){
             System.out.print(t.getValueC()+" ");
@@ -86,32 +87,6 @@ public class Hand {
         }
         System.out.println();
     }
-
-
-
-    //for test
-    public static void test(){
-        Hand h = new Hand();
-        h.addCard(new Card(1,'H'));
-        System.out.println("num: "+h.num+",numA: "+h.numA+",value: "+h.value); //1 1 11
-        System.out.println("isBJ: "+h.isBlackJack()+",is21: "+h.is21Points()+",isLose: "+h.isLose());// f f f
-        h.addCard(new Card(11,'H'));
-        System.out.println("num: "+h.num+",numA: "+h.numA+",value: "+h.value);// 2 1 21
-        System.out.println("isBJ: "+h.isBlackJack()+",is21: "+h.is21Points()+",isLose: "+h.isLose());//t t f
-        h.addCard(new Card(1,'D'));
-        System.out.println("num: "+h.num+",numA: "+h.numA+",value: "+h.value);//3 1 22
-        System.out.println("isBJ: "+h.isBlackJack()+",is21: "+h.is21Points()+",isLose: "+h.isLose());//f f t
-        System.out.println("num: "+h.getNum()+",value: "+h.getValue());//3 22
-        Card c = h.getCardAt(1);
-        System.out.println("Cars 2 is: "+c.getValueC()+",suit: "+c.getSuit());//J heart
-        h.clearCards();
-        System.out.println("num: "+h.num+",numA: "+h.numA+",value: "+h.value);//0 0 0
-        System.out.println("isBJ: "+h.isBlackJack()+",is21: "+h.is21Points()+",isLose: "+h.isLose());//f f f
-        h.addCard(new Card(7,'H'));
-        System.out.println("num: "+h.num+",numA: "+h.numA+",value: "+h.value);//1 0 7
-        System.out.println("isBJ: "+h.isBlackJack()+",is21: "+h.is21Points()+",isLose: "+h.isLose());//f f f
-    }
-
 
 
 }
